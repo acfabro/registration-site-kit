@@ -33,7 +33,7 @@ class RegistrationController extends Controller
 
 Extend its capabilities -- use the config files to specify your custom implementations.
 
-```
+```php
 return [
     'entities' => [
         'event' => [
