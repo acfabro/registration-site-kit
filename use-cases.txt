@@ -1,0 +1,45 @@
+User actor:
+
+User registers for an account
+- register by email, google, facebook, linkedin
+- user gets confirmation email
+
+User confirms email confirmation
+- user gets confirmation email
+- secretariat email gets notified, or not, depending on configuration
+
+User logs in
+- login by username/password, google, facebook, linkedin
+- user will see if registration has been completed
+
+User opens a registration form
+
+User saves an incomplete/complete registration form
+
+User submits a completed registration form
+- user gets confirmation email
+
+====================
+Admin actor:
+
+Create a new event
+
+Cancel an event
+- send emails to all subscribed users
+
+Post event announcement
+- send emails to all subscribed users
+- announcement seen on announcements page
+
+Open a registration
+- see all registration data
+
+Edit a registration
+- edit registration data
+
+Approve a registration
+- user receives an email
+
+Post event announcement to all yet to submit registration
+- send emails to all subscribed users
+

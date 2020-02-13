@@ -1,0 +1,37 @@
+{
+  "name": "acfabro/registration-site-kit",
+  "description": "Library for creating event registration systems",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aljo Fabro",
+      "email": "acfabro@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "ramsey/uuid": "^3.9",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Acfabro\\RegistrationSiteKit\\": "src/RegistrationSiteKit/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Acfabro\\RegistrationSiteKit\\ServiceProviders\\RegistrationSiteKitServiceProvider"
+      ]
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^3.5"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Acfabro\\RegistrationSiteKitTests\\": "tests/src/"
+    }
+  }
+}
