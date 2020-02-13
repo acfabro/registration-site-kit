@@ -30,7 +30,7 @@ class DeleteRegistration implements UseCaseInterface
     /**
      * @var ValidatorFactory
      */
-    private ValidatorFactory $validation;
+    private $validation;
 
     public function __construct(RegistrationRepository $repository, ValidatorFactory $validation)
     {

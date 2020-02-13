@@ -36,11 +36,11 @@ class UserUpdatesRegistration implements UseCaseInterface
     /**
      * @var ValidatorFactory
      */
-    private ValidatorFactory $validation;
+    private $validation;
     /**
      * @var RegistrationFactory
      */
-    private RegistrationFactory $factory;
+    private $factory;
 
     public function __construct(RegistrationRepository $repository, RegistrationFactory $factory, ValidatorFactory $validation)
     {
