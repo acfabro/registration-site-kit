@@ -4,6 +4,7 @@
 namespace Acfabro\RegistrationSiteKit\Core\Data;
 
 
+use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 
 /**
@@ -29,7 +30,7 @@ abstract class BaseRepository implements BaseRepositoryInterface
     /**
      * Change all keys in an array to camel case
      * @param $array
-     * @return \Illuminate\Support\Collection
+     * @return Collection
      */
     protected function toCamel($array)
     {
@@ -41,7 +42,7 @@ abstract class BaseRepository implements BaseRepositoryInterface
     /**
      * Change all keys in an array to snake case
      * @param $array
-     * @return \Illuminate\Support\Collection
+     * @return Collection
      */
     protected function toSnake($array)
     {

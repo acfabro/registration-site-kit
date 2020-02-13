@@ -14,7 +14,7 @@ class Request implements RequestInterface
      * Input data, domain-centric
      * @var mixed
      */
-    protected array $data;
+    protected $data;
 
     /**
      * Parameters used to modify execution settings

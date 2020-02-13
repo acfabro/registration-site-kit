@@ -4,7 +4,9 @@
 namespace Acfabro\RegistrationSiteKit\Core\Exception;
 
 
-class ClassNotFoundException extends \Exception
+use Exception;
+
+class ClassNotFoundException extends Exception
 {
 
 }

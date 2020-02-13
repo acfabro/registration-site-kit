@@ -1,5 +1,7 @@
 <?php
 
+use Acfabro\RegistrationSiteKit\Entities\User\Data\EloquentRepository;
+
 return [
 
     'entities' => [
@@ -19,7 +21,7 @@ return [
             // concrete implementation
             'class' => Acfabro\RegistrationSiteKit\Entities\User\User::class,
             'id' => 'id',
-            'repository' => \Acfabro\RegistrationSiteKit\Entities\User\Data\EloquentRepository::class,
+            'repository' => EloquentRepository::class,
 
         ],
         'agenda' => [

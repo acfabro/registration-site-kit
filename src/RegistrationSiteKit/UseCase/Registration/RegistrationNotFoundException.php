@@ -4,6 +4,8 @@
 namespace Acfabro\RegistrationSiteKit\UseCase\Registration;
 
 
-class RegistrationNotFoundException extends \Exception
+use Exception;
+
+class RegistrationNotFoundException extends Exception
 {
 }

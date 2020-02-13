@@ -32,17 +32,17 @@ class Response implements ResponseInterface
     /**
      * @var string respone status
      */
-    protected string $status;
+    protected $status;
 
     /**
      * @var string response message
      */
-    protected string $message;
+    protected $message;
 
     /**
      * @var array Data objects that need to be returned to the caller
      */
-    protected array $data = [];
+    protected $data = [];
 
     /**
      * @return string
@@ -80,7 +80,7 @@ class Response implements ResponseInterface
      * @param string $code
      * @return Response
      */
-    public function setCode(string $code): Response
+    public function setCode(string $code): ResponseInterface
     {
         $this->code = $code;
         return $this;
@@ -90,7 +90,7 @@ class Response implements ResponseInterface
      * @param MessageBag $errors
      * @return Response
      */
-    public function setErrors(MessageBag $errors): Response
+    public function setErrors(MessageBag $errors): ResponseInterface
     {
         $this->errors = $errors;
         return $this;
@@ -100,7 +100,7 @@ class Response implements ResponseInterface
      * @param string $status
      * @return Response
      */
-    public function setStatus(string $status): Response
+    public function setStatus(string $status): ResponseInterface
     {
         $this->status = $status;
         return $this;
@@ -110,7 +110,7 @@ class Response implements ResponseInterface
      * @param string $message
      * @return Response
      */
-    public function setMessage(string $message): Response
+    public function setMessage(string $message): ResponseInterface
     {
         $this->message = $message;
         return $this;

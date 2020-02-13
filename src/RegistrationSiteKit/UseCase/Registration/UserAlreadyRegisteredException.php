@@ -4,9 +4,10 @@
 namespace Acfabro\RegistrationSiteKit\UseCase\Registration;
 
 
+use Exception;
 use Throwable;
 
-class UserAlreadyRegisteredException extends \Exception
+class UserAlreadyRegisteredException extends Exception
 {
     public function __construct($message = "User already registered", $code = 0, Throwable $previous = null)
     {

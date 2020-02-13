@@ -5,6 +5,7 @@ namespace Acfabro\RegistrationSiteKit\ServiceProviders;
 use Acfabro\RegistrationSiteKit\Core\Entity\EntityInterface;
 use Acfabro\RegistrationSiteKit\Util\Id\IdGeneratorInterface;
 use Acfabro\RegistrationSiteKit\Util\Id\UuidIdGenerator;
+use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Support\ServiceProvider;
 
 class RegistrationSiteKitServiceProvider extends ServiceProvider
@@ -77,7 +78,7 @@ if (!function_exists('entity')) {
      * @param string $factoryClass the factory that will be used to make the entity
      * @param array $data input data
      * @return EntityInterface
-     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     * @throws BindingResolutionException
      */
     function entity($factoryClass, $data)
     {

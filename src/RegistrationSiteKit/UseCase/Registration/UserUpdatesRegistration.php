@@ -4,6 +4,8 @@
 namespace Acfabro\RegistrationSiteKit\UseCase\Registration;
 
 
+use Acfabro\RegistrationSiteKit\Core\Exception\ClassNotFoundException;
+use Acfabro\RegistrationSiteKit\Core\Exception\InsufficientParametersException;
 use Acfabro\RegistrationSiteKit\Core\UseCase\RequestInterface;
 use Acfabro\RegistrationSiteKit\Core\UseCase\Response;
 use Acfabro\RegistrationSiteKit\Core\UseCase\ResponseInterface;
@@ -53,8 +55,8 @@ class UserUpdatesRegistration implements UseCaseInterface
      * @return bool
      * @throws RegistrationNotFoundException
      * @throws UserAlreadyRegisteredException
-     * @throws \Acfabro\RegistrationSiteKit\Core\Exception\ClassNotFoundException
-     * @throws \Acfabro\RegistrationSiteKit\Core\Exception\InsufficientParametersException
+     * @throws ClassNotFoundException
+     * @throws InsufficientParametersException
      */
     public function execute(RequestInterface $input, ResponseInterface $output)
     {

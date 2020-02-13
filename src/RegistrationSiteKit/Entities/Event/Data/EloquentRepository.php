@@ -5,6 +5,7 @@ namespace Acfabro\RegistrationSiteKit\Entities\Event\Data;
 
 
 use Acfabro\RegistrationSiteKit\Core\Data\BaseRepository;
+use Acfabro\RegistrationSiteKit\Entities\Event\Data\Eloquent\Event;
 use Acfabro\RegistrationSiteKit\Entities\Event\EventInterface;
 
 /**
@@ -20,7 +21,7 @@ class EloquentRepository extends BaseRepository implements RepositoryInterface
     /**
      * Uses an eloquent model as model
      *
-     * @param \Acfabro\RegistrationSiteKit\Entities\Event\Data\Eloquent\Event $model
+     * @param Event $model
      */
     public function __construct($model)
     {

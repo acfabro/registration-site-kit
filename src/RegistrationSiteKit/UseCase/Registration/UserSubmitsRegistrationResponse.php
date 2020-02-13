@@ -9,7 +9,7 @@ use Acfabro\RegistrationSiteKit\Core\UseCase\ResponseInterface;
 
 class UserSubmitsRegistrationResponse extends Response implements ResponseInterface
 {
-    protected array $registration;
+    protected $registration;
 
     /**
      * @return array

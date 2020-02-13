@@ -4,6 +4,7 @@ namespace Acfabro\RegistrationSiteKit\Entities\Agenda;
 
 use Acfabro\RegistrationSiteKit\Core\Entity\Entity;
 use Acfabro\RegistrationSiteKit\Entities\Speaker\Speaker;
+use DateTime;
 
 /**
  * Class AgendaItem
@@ -14,8 +15,8 @@ use Acfabro\RegistrationSiteKit\Entities\Speaker\Speaker;
  * @property string $title
  * @property string $description
  * @property Speaker $speaker
- * @property \DateTime $start
- * @property \DateTime $end
+ * @property DateTime $start
+ * @property DateTime $end
  */
 class AgendaItem extends Entity
 {

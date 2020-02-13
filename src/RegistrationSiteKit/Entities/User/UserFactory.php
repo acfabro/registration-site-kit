@@ -6,6 +6,7 @@ namespace Acfabro\RegistrationSiteKit\Entities\User;
 
 use Acfabro\RegistrationSiteKit\Core\Entity\AbstractEntityFactory;
 use Acfabro\RegistrationSiteKit\Util\Id\IdGeneratorInterface;
+use Exception;
 use Illuminate\Support\Arr;
 
 class UserFactory extends AbstractEntityFactory
@@ -24,7 +25,7 @@ class UserFactory extends AbstractEntityFactory
      * @param array $params
      * @param array $config
      * @return mixed
-     * @throws \Exception
+     * @throws Exception
      */
     public function make(array $data, array $params=[], array $config = []) {
         // see if config overridden

@@ -4,7 +4,9 @@
 namespace Acfabro\RegistrationSiteKit\Core\Exception;
 
 
-class InputValidationException extends \Exception
+use Exception;
+
+class InputValidationException extends Exception
 {
 
 }

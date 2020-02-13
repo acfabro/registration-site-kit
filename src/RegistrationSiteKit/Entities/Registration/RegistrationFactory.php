@@ -20,8 +20,8 @@ use Illuminate\Support\Arr;
  */
 class RegistrationFactory extends AbstractEntityFactory
 {
-    protected IdGeneratorInterface $idGenerator;
-    protected ValidatorFactory $validation;
+    protected $idGenerator;
+    protected $validation;
     protected $config = [];
 
     public function __construct(IdGeneratorInterface $idGenerator, ValidatorFactory $validation)

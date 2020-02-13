@@ -29,11 +29,11 @@ class UserSubmitsRegistration implements UseCaseInterface
 {
     use CanCheckIfUserAlreadyRegistered;
 
-    protected RegistrationFactory $factory;
+    protected $factory;
 
-    protected RegistrationRepository $repository;
+    protected $repository;
 
-    protected ValidatorFactory $validation;
+    protected $validation;
 
     public function __construct(RegistrationRepository $repository, RegistrationFactory $factory, ValidatorFactory $validation)
     {

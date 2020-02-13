@@ -3,8 +3,9 @@
 namespace Acfabro\RegistrationSiteKitTests\Unit\Util;
 
 use Acfabro\RegistrationSiteKit\Util\Id\UuidIdGenerator;
+use Orchestra\Testbench\TestCase;
 
-class UuidIdGeneratorTest extends \Orchestra\Testbench\TestCase
+class UuidIdGeneratorTest extends TestCase
 {
     public function testGenerateNotEmpty()
     {

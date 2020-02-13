@@ -4,7 +4,9 @@
 namespace Acfabro\RegistrationSiteKit\Core\Exception;
 
 
-class InsufficientParametersException extends \Exception
+use Exception;
+
+class InsufficientParametersException extends Exception
 {
 
 }

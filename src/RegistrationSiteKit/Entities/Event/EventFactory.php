@@ -6,6 +6,7 @@ namespace Acfabro\RegistrationSiteKit\Entities\Event;
 
 use Acfabro\RegistrationSiteKit\Core\Entity\AbstractEntityFactory;
 use Acfabro\RegistrationSiteKit\Util\Id\IdGeneratorInterface;
+use Exception;
 use Illuminate\Support\Arr;
 
 class EventFactory extends AbstractEntityFactory
@@ -24,7 +25,7 @@ class EventFactory extends AbstractEntityFactory
      * @param array $params
      * @param array $config
      * @return mixed
-     * @throws \Exception
+     * @throws Exception
      */
     public function make(array $data, array $params=[], array $config = []) {
         // see if config overridden

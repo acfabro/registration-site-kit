@@ -5,6 +5,7 @@ namespace Acfabro\RegistrationSiteKit\Core\Entity;
 
 
 use ArrayAccess;
+use Exception;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Database\Eloquent\JsonEncodingException;
@@ -88,7 +89,7 @@ abstract class Entity implements EntityInterface, Arrayable, ArrayAccess, Jsonab
      * @param  array  $attributes
      * @return $this
      *
-     * @throws \Illuminate\Database\Eloquent\MassAssignmentException
+     * @throws MassAssignmentException
      */
     public function fill(array $attributes)
     {
@@ -285,13 +286,13 @@ abstract class Entity implements EntityInterface, Arrayable, ArrayAccess, Jsonab
      *
      * @param $set
      * @return mixed
-     * @throws \Exception
+     * @throws Exception
      */
     public function validationRules($set)
     {
         if (empty($this->validationRules[$set])) {
-            throw new \Exception("Validation rule set '{$set}' not found");
-        };
+            throw new Exception("Validation rule set '{$set}' not found");
+        }
 
         return $set;
     }

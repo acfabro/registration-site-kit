@@ -11,6 +11,7 @@ use Acfabro\RegistrationSiteKit\UseCase\Registration\UserSubmitsRegistrationResp
 use Acfabro\RegistrationSiteKit\UseCase\Registration\UserAlreadyRegisteredException;
 use Acfabro\RegistrationSiteKitTests\RskTestCase;
 use Acfabro\RegistrationSiteKitTests\Unit\Registration\Setup;
+use Exception;
 use Illuminate\Support\Collection;
 
 class CreateEventRegistrationTest extends RskTestCase
@@ -38,7 +39,7 @@ class CreateEventRegistrationTest extends RskTestCase
                 'id', $output->getDataItem('registration')['id']
             )->count() > 0);
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             $this->fail();
 
         }

@@ -4,6 +4,7 @@ namespace Acfabro\RegistrationSiteKit\Entities\Event;
 
 
 use Acfabro\RegistrationSiteKit\Core\Entity\EntityInterface;
+use DateTime;
 
 /**
  * Individual event
@@ -35,13 +36,13 @@ interface EventInterface extends EntityInterface
 
     /**
      * Start date
-     * @return \DateTime
+     * @return DateTime
      */
     public function start();
 
     /**
      * End date
-     * @return \DateTime
+     * @return DateTime
      */
     public function end();
 

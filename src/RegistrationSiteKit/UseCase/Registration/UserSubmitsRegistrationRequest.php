@@ -36,7 +36,7 @@ class UserSubmitsRegistrationRequest extends Request implements RequestInterface
     /**
      * @var array all the reg data
      */
-    protected array $data;
+    protected $data;
 
     /**
      * @var mixed
