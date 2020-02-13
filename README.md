@@ -5,20 +5,20 @@ A Laravel package used to implement an event registration website.
 ```php
 class RegistrationController extends Controller
 {
-
     /**
-     * @param RequestAlias $request
+     * @param Request $request
      * @param UserSubmitsRegistration $useCase Container-injected use-case
      * @Post("/submit")
+     * @return array|string
      */
-    public function submitRegistration(RequestAlias $request, UserSubmitsRegistration $useCase)
+    public function submitRegistration(Request $request, UserSubmitsRegistration $useCase)
     {
         $userId = session('userId');
         $eventId = session('eventId');
 
         try {
             $useCase->execute(
-                new UserSubmitsRegistrationRequest($request->input(), $userId, $eventId),
+                new UserSubmitsRegistrationRequest($request->input('data'), $userId, $eventId),
                 $output = new UserSubmitsRegistrationResponse()
             );
 
@@ -28,6 +28,5 @@ class RegistrationController extends Controller
             return ['messgae' => 'There was an error: ' . $e->getMessage()];
         }
     }
-
 }
 ```
