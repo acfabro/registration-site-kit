@@ -18,7 +18,7 @@ class RegistrationController extends Controller
 
         try {
             $useCase->execute(
-                new UserSubmitsRegistrationRequest($request->input('data'), $userId, $eventId),
+                new UserSubmitsRegistrationRequest($request->input(), $userId, $eventId),
                 $output = new UserSubmitsRegistrationResponse()
             );
 
