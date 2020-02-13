@@ -30,3 +30,33 @@ class RegistrationController extends Controller
     }
 }
 ```
+
+Extend its capabilities -- use the config files to specify your custom implementations.
+
+```
+return [
+    'entities' => [
+        'event' => [
+            // concrete implementation
+            'class' => Acfabro\RegistrationSiteKit\Entities\Event\Event::class,
+            'id' => 'id',
+            'repository' => Acfabro\RegistrationSiteKit\Entities\Event\Data\EloquentRepository::class,
+        ],
+        'registration' => [
+            // custom implementation
+            'class' => App\MyCustomPackage\Registration::class,
+            'id' => 'id',
+            'repository' => App\MyCustomRepos\EloquentRepository::class,
+        ],
+        'user' => [
+            // concrete implementation
+            'class' => Acfabro\RegistrationSiteKit\Entities\User\User::class,
+            'id' => 'id',
+            'repository' => Acfabro\RegistrationSiteKit\Entities\User\Data\EloquentRepository::class,
+
+        ],
+        
+        // .....
+    ],
+];
+```
