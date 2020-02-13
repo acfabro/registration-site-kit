@@ -37,7 +37,6 @@ Extend its capabilities -- use the config files to specify your custom implement
 return [
     'entities' => [
         'event' => [
-            // concrete implementation
             'class' => Acfabro\RegistrationSiteKit\Entities\Event\Event::class,
             'id' => 'id',
             'repository' => Acfabro\RegistrationSiteKit\Entities\Event\Data\EloquentRepository::class,
@@ -49,7 +48,6 @@ return [
             'repository' => App\MyCustomRepos\EloquentRepository::class,
         ],
         'user' => [
-            // concrete implementation
             'class' => Acfabro\RegistrationSiteKit\Entities\User\User::class,
             'id' => 'id',
             'repository' => Acfabro\RegistrationSiteKit\Entities\User\Data\EloquentRepository::class,
